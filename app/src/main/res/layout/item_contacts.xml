@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5F5F5">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contacts_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingLeft="15dp"
+        android:background="@color/white"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+        <FrameLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_profile_contactItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/photo1"
+                app:shapeAppearanceOverlay="@style/circle"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|right">
+
+                <TextView
+                    android:id="@+id/tv_marker_yellow"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_yellow"
+                    android:text="_|"
+                    android:textSize="5sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bc_items">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_fullName_contactItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="Xushnud Boymurodov"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_quality"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="HdQuality"
+                    android:textColor="#90000000"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_iconPhone_contactItem"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_phone_24" />
+
+    </LinearLayout>
+
+</LinearLayout>
